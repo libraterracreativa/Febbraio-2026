@@ -2090,26 +2090,24 @@
   <!-- SCRIPT EMAILJS + LOGICA FORM -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
-    // Eventi Gennaio 2026 – per il form di prenotazione
+        // Eventi Febbraio 2026 – per il form di prenotazione
     const eventsData = [
-      { id: 'gen_soundbath_16', date: 16, title: 'Sound Bath Sciamanico', meta: '16 gennaio · 18:00-20:00 · con Filippo Curto', value: 'Sound Bath Sciamanico · 16/01 · 18:00-20:00' },
-      { id: 'gen_cucina_vegetale', date: 17, title: 'Corso di Cucina Vegetale & Aperitivo', meta: '17 gennaio · 15:00-19:00 + aperitivo · con Alfredo d’Adamo', value: 'Corso di Cucina Vegetale & Aperitivo · 17/01 · 15:00-19:00' },
-      { id: 'gen_emozioni', date: 18, title: 'Le Emozioni che Non Sappiamo Nominare', meta: '18 gennaio · 16:00-18:00 · con Giada Boschetto', value: 'Le Emozioni che Non Sappiamo Nominare · 18/01 · 16:00-18:00' },
-      { id: 'gen_surforall', date: 18, title: 'Lotteria & Aperitivo Surforall', meta: '18 gennaio · 18:00-22:00 · in collaborazione con Surforall', value: 'Lotteria & Aperitivo Surforall · 18/01 · 18:00-22:00' },
-      { id: 'gen_buona_alimentazione4', date: 19, title: 'Incontri di Buona Alimentazione · 4° Incontro', meta: '19 gennaio · 18:00-20:00 · con Dott.ssa Francesca Ciuffi', value: 'Incontri di Buona Alimentazione · 4° · 19/01 · 18:00-20:00' },
-      { id: 'gen_sciamanesimo3', date: 21, title: 'Sciamanesimo Contemporaneo · Incontro 3 di 3', meta: '21 gennaio · 18:00-20:00 · con Beatrice Reglieri', value: 'Sciamanesimo Contemporaneo · Incontro 3 di 3 · 21/01 · 18:00-20:00' },
-      { id: 'gen_multisensoriale', date: 23, title: 'Laboratorio Multisensoriale per Bebè', meta: '23 gennaio · 16:00-18:30 · con Dott.ssa Alice Vocaturo', value: 'Laboratorio Multisensoriale per Bebè · 23/01 · 16:00-18:30' },
-      { id: 'gen_reiki', date: 24, title: 'Tera Mai Reiki · Corso e Attivazione 1° livello', meta: '24 gennaio · 9:30-18:30 · con Claudia Tani', value: 'Tera Mai Reiki · 1° livello · 24/01 · 9:30-18:30' },
-      { id: 'gen_wimhof', date: 25, title: 'Wim Hof Method · Fundamentals', meta: '25 gennaio · 9:00-15:00 · con Andrea Bianchi', value: 'Wim Hof Method Fundamentals · 25/01 · 9:00-15:00' },
-      { id: 'gen_arteterapia', date: 25, title: 'Laboratorio di Arteterapia · Come un Respiro d’Inverno', meta: '25 gennaio · 16:30-18:30 · con Ilaria Marracci', value: 'Laboratorio di Arteterapia · 25/01 · 16:30-18:30' },
-      { id: 'gen_soundbath_30', date: 30, title: 'Sound Bath Sciamanico', meta: '30 gennaio · 18:00-20:00 · con Filippo Curto', value: 'Sound Bath Sciamanico · 30/01 · 18:00-20:00' },
-      { id: 'gen_fermentazione', date: 31, title: 'Corso di Fermentazione · Kombucha', meta: '31 gennaio · 15:00-18:00 · con Andrea Rossi', value: 'Corso di Fermentazione · Kombucha · 31/01 · 15:00-18:00' },
-      { id: 'gen_cena_amasia', date: 31, title: 'Cena Amasia da Libra', meta: '31 gennaio · dalle 20:00 · Amasia', value: 'Cena Amasia da Libra · 31/01 · dalle 20:00' },
+      { id: 'feb_germogli', date: 1, title: 'Germogli di Meraviglia · Arteterapia per Bambini', meta: '1 febbraio · 9:45-11:00 (24-36 mesi) · 11:15-12:30 (3-5 anni) · con Irene Tovani', value: 'Germogli di Meraviglia · 01/02 · laboratorio bimbi' },
+      { id: 'feb_sanbiagio', date: 3, title: 'Cena di San Biagio · Tradizione Contemporanea', meta: '3 febbraio · dalle 20:00 · cucina plant-based by Amasia', value: 'Cena di San Biagio · 03/02 · dalle 20:00' },
+      { id: 'feb_naturopatia', date: 7, title: 'Naturopatia · Microbiota & Gemmoderivati', meta: '7 febbraio · 16:00-17:30 · con Vanessa Parducci', value: 'Naturopatia · Microbiota & Gemmoderivati · 07/02 · 16:00-17:30' },
+      { id: 'feb_mindfulness', date: 12, title: 'Dal Respiro all’Ascolto di Sé · Mindfulness', meta: '12 febbraio · 19:00-20:30 · incontro 1 di 4 · con Daniele Boldrini', value: 'Mindfulness · Dal Respiro all’Ascolto di Sé · 12/02 · 19:00-20:30' },
+      { id: 'feb_soundbath', date: 13, title: 'Shamanic Sound Bath', meta: '13 febbraio · 18:00-20:00 · con Filippo Curto “Gentlehawk”', value: 'Shamanic Sound Bath · 13/02 · 18:00-20:00' },
+      { id: 'feb_ceramica_14', date: 14, title: 'Corso di Ceramica', meta: '14 febbraio · 15:00-17:30 · con Linda Bianchi Cervini', value: 'Corso di Ceramica · 14/02 · 15:00-17:30' },
+      { id: 'feb_flower_bouquet', date: 14, title: 'Flower Bouquet di San Valentino · Workshop Floreale', meta: '14 febbraio · 10:30-13:00 · con Fiorenzo Bellina', value: 'Flower Bouquet Workshop · 14/02 · 10:30-13:00' },
+      { id: 'feb_social_run', date: 15, title: 'Social Run · Il Ritmo del Benessere', meta: '15 febbraio · ritrovo 11:00 da Libra · con Simone', value: 'Social Run · 15/02 · ritrovo 11:00' },
+      { id: 'feb_buona_alimentazione5', date: 16, title: 'Incontri di Buona Alimentazione · 5° Incontro “Il buon pranzo”', meta: '16 febbraio · 18:00-20:00 · con Francesca Ciuffi', value: 'Buona Alimentazione · Il buon pranzo · 16/02 · 18:00-20:00' },
+      { id: 'feb_cerimonia_sciamanica', date: 27, title: 'Come in cielo, così in terra · Cerimonia Sciamanica', meta: '27 febbraio · 17:00-19:00 · con Filippo Curto “Gentlehawk”', value: 'Cerimonia Sciamanica · 27/02 · 17:00-19:00' },
 
       // Settimanali / continuativi
-      { id: 'gen_allenamento_funzione', date: 0, title: 'Allenamento Funzionale Personalizzato', meta: 'Dal lunedì al sabato · su appuntamento · con Simone', value: 'Allenamento Funzionale Personalizzato · su appuntamento' },
-      { id: 'gen_hatha_yoga', date: 0, title: 'Hatha Yoga con Silvia', meta: 'Ogni martedì · 17:00-18:00 Mamma & Bebè · 18:15-19:15 Pratica aperta', value: 'Hatha Yoga con Silvia · ogni martedì' },
-      { id: 'gen_ceramica', date: 0, title: 'Corso di Ceramica con Linda', meta: 'Organizzabile ogni settimana · durata 3 ore', value: 'Corso di Ceramica con Linda · su prenotazione' },
+      { id: 'feb_allenamento_funzione', date: 0, title: 'Allenamento Funzionale Personalizzato', meta: 'Dal lunedì al sabato · su appuntamento · con Simone', value: 'Allenamento Funzionale Personalizzato · su appuntamento' },
+      { id: 'feb_hatha_yoga', date: 0, title: 'Hatha Yoga · Movimento, Cura e Nuova Vita', meta: 'Ogni martedì · 17:00-18:00 Mamma & Bebè · 18:15-19:15 Pratica aperta · con Silvia', value: 'Hatha Yoga con Silvia · ogni martedì' },
+      { id: 'feb_brunch', date: 0, title: 'Brunch della Domenica', meta: 'Tutte le domeniche di febbraio · 11:30-15:00 · cucina vegetale da Libra', value: 'Brunch della Domenica · tutte le domeniche · 11:30-15:00' },
+      { id: 'feb_ceramica_su_richiesta', date: 0, title: 'Corso di Ceramica su richiesta', meta: 'Attivabile in altre date · minimo 2 persone (o 4 per gruppo privato)', value: 'Corso di Ceramica su richiesta · su prenotazione' },
     ];
 
     function scrollToSection(sectionId) {
